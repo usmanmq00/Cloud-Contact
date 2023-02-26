@@ -1,98 +1,160 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title>Cloud Contact</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cloud Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <div class="container-fluid">
-      <p class="h2 text-white logo"><strong><i class="fa-sharp fa-solid fa-address-card Icon"></i>Cloud Contact</strong>
-      </p>
-      <ul class="navLinks">
-        <li class="text-white navItems">Hello Sultans Dina</li>
-        <li class="text-white font-weight-bold navItems"><strong><i
-              class="fa-sharp fa-solid fa-right-from-bracket Icon"></i>Logout</strong></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary justify-content-between p-3">
+        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+            <img src="images\3209380_badge_contact_id_identity_person_icon (1).svg" alt="logo url" width="30"
+                height="24" class="d-inline-block align-text-top white bg-white m-2">
+            <h5 class="m-1">Cloud Contact</h5>
+        </a>
+        <div class="ml-auto d-flex align-items-center ">
+            <ul class="navbar-nav">
+                <li class="nav-item active ">
+                    <a class="nav-link text-white" href="#">Hello</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Sultans Dine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Container -->
-  <section class="container col-lg-11">
-    <!-- Form -->
-    <form method="get" class="col-lg-6 col-12 form" >
-      <p class="h4 text-center text-primary formTitle"><strong>Add Contact</strong></p>
-      <input type="text" placeholder="Name" id="formName" class="inputFields" name="name" required><br>
-      <input type="email" placeholder="Email" id="formEmail" class="inputFields" name="email" required><br>
-      <input type=text" placeholder="Phone" id="formPassword" class="inputFields" name="password" required>
-      <div class="form-group">
-        <label class="h4"><strong>Contact Type</strong></label>
-        <!-- <div class="type"> -->
-        <input type="radio" class="form-check-input" name="type" value="Personal">Personal
-        <input type="radio" class="form-check-input type2" name="type" name="optradio" value="Professional">Professional
-        <!-- </div> -->
-      </div>
-      <div class="form-group Upload">
-        <input type="file" name="file">
-      </div>
-      <button type="button" class="btn btn-primary" id="addCon"><strong>Add Contact</strong></button>
-    </form>
-    </div>
+    <section class="container-fluid  row mt-2" >
+        <div class="col m-4">
+            <h2 class="text-center">Add Contact</h2>
+            <form class="mt-3" action="#" method="get" id="section12">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name" id="exampleInputName1"
+                        aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Email" id="exampleInputEmail1">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="phone(XXXXXXXXXX)" id="exampleInputphone1">
+                </div>
+                <label for="fname">Contact Type</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Personal">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Personal
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Professional" >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Professional
+                    </label>
+                </div>
+                <div class="mb-3 mt-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
 
-    <!-- Right Side -->
-    <section class="rightSide col-lg-6">
-      <!-- Search Bar -->
-      <input class="searchbar col-lg-12 col-12" type="search" placeholder="Filter Contacts...">
-      `
-      <!-- User Cards -->
-      <section class="cards col-lg-12 col-12" id="cards">
-        <section class="card d-flex flex-row crd col-lg-12">
-          <div class="cardLeft col-lg-9">
-            <h2 class="userName">Ishan Sarkar</h2>
-            <p class="userMail"><i class="fa-solid fa-envelope-open userIcon Icon"></i>ishan@gmail.com</p>
-            <p class="userPhone"><i class="fa-solid fa-phone userIco Icon"></i>01719058105</p>
-            <div class="userButtons">
-              <button class="edit text-white bg-secondary">Edit</button>
-              <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" id="myBtn" class="btn btn-primary" onclick="addUser()">Add Contact</button>
+                <!-- <button type="button" id="myBtn" class="btn btn-primary d-none" onclick="editCard()">Edit User</button> -->
+            </form>
+
+        </div>
+        <div class="col m-4" id="contain">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Filter Contacts..." id="exampleInputPassword1">
             </div>
-          </div>
-          <div class="cardRight col-lg-3">
-            <button type="button" class="btn btn-primary" id="profession">Personal</button>
-            <img src="img/img_avatar1.png" alt="ishan" width="150px" height="150px">
-          </div>
-        </section>
-        <section class="card d-flex flex-row crd col-lg-12">
-          <div class="cardLeft col-lg-9">
-            <h2 class="userName">Erafi Ahonaf</h2>
-            <p class="userMail"><i class="fa-solid fa-envelope-open userIcon Icon"></i>erafi@gmail.com</p>
-            <p class="userPhone"><i class="fa-solid fa-phone userIcon Icon"></i>01719058105</p>
-            <div class="userButtons">
-              <button class="edit text-white bg-secondary">Edit</button>
-              <button type="button" class="btn btn-danger">Delete</button>
+            <!-- <div class="card">
+                <div class="d-flex justify-content-between p-3">
+                    <div class="d-flex flex-column ml-auto mt-3">
+                        <h5>Ishan Sarker</h5>
+                        <div class="d-flex mt-2">
+                            <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" alt=""
+                                width="18px" height="15px" class="m-1">
+                            <p class="card-text">Ishan@gmail.com</p>
+                        </div>
+                        <div class="d-flex mt-1">
+                            <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" alt=""
+                                width="18px" height="15px" class="m-1">
+                            <p class="card-text">01719058105</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-dark">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column mr-auto">
+                        <a href="#" class="btn btn-primary">Personal</a>
+                        <img class="mt-1" src="images\index.jpg" alt="" width="150px" height="150px">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="cardRight col-lg-3">
-            <button type="button" class="btn btn-success">Professional</button>
-            <img src="img/img_avatar1.png" alt="erafi" width="150px" height="150px">
-          </div>
-        </section>
-      </section>
+            <div class="card mt-3">
+                <div class="d-flex justify-content-between p-3">
+                    <div class="d-flex flex-column ml-auto mt-3">
+                        <h5>Ishan Sarker</h5>
+                        <div class="d-flex mt-2">
+                            <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" alt=""
+                                width="18px" height="15px" class="m-1">
+                            <p class="card-text">Ishan@gmail.com</p>
+                        </div>
+                        <div class="d-flex mt-1">
+                            <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" alt=""
+                                width="18px" height="15px" class="m-1">
+                            <p class="card-text">01719058105</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-dark">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column mr-auto">
+                        <a href="#" class="btn btn-success">Professional</a>
+                        <img class="mt-1" src="images\index.jpg" alt="" width="150px" height="150px">
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="d-flex justify-content-between p-3">
+                    <div class="d-flex flex-column ml-auto mt-3">
+                        <h5>Ishan Sarker</h5>
+                        <div class="d-flex mt-2">
+                            <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" alt=""
+                                width="18px" height="15px" class="m-1">
+                            <p class="card-text">Ishan@gmail.com</p>
+                        </div>
+                        <div class="d-flex mt-1">
+                            <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-512.png" alt=""
+                                width="18px" height="15px" class="m-1">
+                            <p class="card-text">01719058105</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-dark">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column mr-auto">
+                        <a href="#" class="btn btn-success">Professional</a>
+                        <img class="mt-1" src="images\index.jpg" alt="" width="150px" height="150px">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
     </section>
 
-
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
